@@ -120,6 +120,7 @@ componentWillMount() {
         this.childIndex = 1;
         this.state.scrollValue.setValue(1);
     }
+    
     if(this.props.initialPage){
         var initialPage = Number(this.props.initialPage);
         if (initialPage > 0) {
@@ -215,11 +216,11 @@ movePage(step, gs, animate = true) {
             if (event.finished) {
               postChange();
           }
-        // moved && this.props.onChangePage && this.props.onChangePage(pageNumber);
+         moved && this.props.onChangePage && this.props.onChangePage(pageNumber);
     });
     } else {
         postChange();
-        // moved && this.props.onChangePage && this.props.onChangePage(pageNumber);
+         moved && this.props.onChangePage && this.props.onChangePage(pageNumber);
     }
 },
 
